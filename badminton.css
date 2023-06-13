@@ -284,7 +284,7 @@ header a {
 }
 
 .dropdown-content {
-  top: 1;
+  top: 100%;
   display: none;
   position: absolute;
   background-color: white;
