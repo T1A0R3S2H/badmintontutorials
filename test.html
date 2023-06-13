@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Birthday!</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      background-image: linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #333 75%, #333),
+                        linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #333 75%, #333);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #555;
+      color: #fff;
+    }
+
+    button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Birthday!</h1>
+  <div class="container">
+    <label for="day">Day:</label>
+    <select id="day">
+      <option value="">Select Day</option>
+      <!-- Add options for days 1 to 31 -->
+      <script>
+        for (var i = 1; i <= 31; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select>
+
+    <label for="month">Month:</label>
+    <select id="month">
+      <option value="">Select Month</option>
+      <!-- Add options for months January to December -->
+      <script>
+        var months = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+
+        for (var i = 0; i < months.length; i++) {
+          document.write(`<option value="${i + 1}">${months[i]}</option>`);
+        }
+      </script>
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year">
+      <option value="">Select Year</option>
+      <!-- Add options for years from 1900 to the current year -->
+      <script>
+        var currentYear = new Date().getFullYear();
+        for (var i = 1900; i <= 10000; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select>
+
+    <button onclick="calculateDay()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateDay() {
+      var day = document.getElementById("day").value;
+      var month = document.getElementById("month").value;
+      var year = document.getElementById("year").value;
+
+      if (day && month && year) {
+        var date = new Date(year, month - 1, day);
+        var options = { weekday: 'long' };
+        var dayOfWeek = new Intl.DateTimeFormat('en-US', options).format(date);
+
+        document.getElementById("result").innerHTML = "Your birthday is on a " + dayOfWeek;
+      }
+    }
+  </script>
+</body>
+</html>

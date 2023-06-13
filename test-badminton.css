@@ -1,0 +1,358 @@
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-image: url('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Styling for the video section */
+#video-player {
+  background-color: #ffffff; /* Set the background color to white */
+  width: 800px; /* Adjust the desired width */
+  height: 450px; /* Adjust the desired height */
+  margin: 0 auto;
+}
+
+/* Styling for the video element */
+video {
+  width: 100%; /* Set the video width to fill the parent container */
+  height: 100%; /* Set the video height to fill the parent container */
+}
+
+/* .piechart {
+  margin-top: 300px;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      pink 70deg, 
+      lightblue 0 235deg, 
+      orange 0);
+} */
+
+/* body,
+.piechart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+header {
+  background: linear-gradient(to bottom, #006cb7 50%, #00a84f 50%);
+  height: 120px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  float: left;
+}
+
+header h1 {
+  font-family: 'Lexend Deca', sans-serif;
+  /* change the font family */
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  padding-top: 1px;
+  flex: 1;
+}
+
+header nav {
+  float: right;
+  padding-top: 94px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+header a {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+/* doubts hai, is black wale ko nihe kaise shift kare? */
+
+.navbar {
+  /* padding-top: 0px; */
+  /* background: linear-gradient(to bottom, #006cb7 50%, #00a84f 50%); */
+  overflow: hidden;
+  /* background-color: #00a84f; */
+  /* background-color: black; */
+  padding-top: 93px;
+  padding-bottom: 0px;
+  /* padding-inline-start: 10px; */
+  /* background-color: #00a84f; */
+  /* padding-left: -4px; */
+}
+
+.navbar a {
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  /* background: linear-gradient(to bottom, #006cb7 50%, #00a84f 50%); */
+  font-size: 15px;
+  background-color: #008a4028;
+  /* background-image: url('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+
+.image-container {
+  display: flex;
+  font-family: 'Lexend Deca', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-wrapper {
+  flex-basis: calc(50% - 1rem);
+  margin-right: 2rem;
+}
+
+.image-wrapper:last-of-type {
+  margin-right: 0;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.image-caption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+
+
+
+
+.dabba {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.roadmap-image {
+  display: block;
+  /* width: 100%; */
+  /* height: auto; */
+  z-index: 1;
+}
+
+.overlay-image {
+  position: absolute;
+  z-index: 2;
+}
+
+.overlay-image-1 {
+  top: 39.5%;
+  left: 47%;
+  /* width: 15%; */
+}
+
+.overlay-image-2 {
+  top: 47.5%;
+  left: 38%;
+  /* width: 15%; */
+}
+
+.overlay-image-3 {
+  top: 55.5%;
+  left: 55.5%;
+  /* width: 15%; */
+}
+
+.overlay-image-4 {
+  top: 81.6%;
+  left: 40.5%;
+  /* width: 15%; */
+}
+
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Additional styles for dark mode */
+
+.pic-dabba {
+  display: flex;
+  font-family: 'Lexend Deca', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pic-wrapper {
+  flex-basis: calc(50% - 1rem);
+  margin-right: 2rem;
+}
+
+.pic-wrapper:last-of-type {
+  margin-right: 0;
+}
+
+.pic-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.pic-caption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+/* go to top button using javascript */
+#goToTopButton {
+  display: none; /* Hide the button by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#goToTopButton:hover {
+  background-color: #777;
+}
+
+
+
+/* #background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    /* add some curves and styling */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: linear-gradient(to bottom, #006cb7 50%, #00a84f 50%);
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 0;
+    /*add some curves and styling */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: white;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    /* add some curves and styling */
+    border-radius: 10px;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-image: linear-gradient(to bottom, #006cb7 50%, #008a40 50%);
+    /* add some curves and styling */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

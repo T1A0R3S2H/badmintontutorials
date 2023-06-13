@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Page</title>
+    <link rel="icon" href="photographyWebsitelogo.gif" type="image/x-icon">
+    <link rel="stylesheet" href="css/photography-testing.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="logo">
+            <img src="https://media1.giphy.com/media/xcFJX6T9z2iqiB9Ud9/giphy.gif?cid=ecf05e47bwn116q8sfzuhwvjuwfi2tmxvr68z12oiobyuv8t&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+                alt="Logo" height="20%" width="20%">
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <center>
+        <!-- content goes here -->
+    </center>
+    
+
+    <!-- progress-bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+
+<!-- ************************************* -->
+<!-- neeche carousel hai, with detail wala -->
+<div class="slideshow">
+    <ul class="slides">
+      <li class="slide is-active">
+        <div class="cover"
+          style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature4.jpg);"></div>
+      </li>
+      <li class="slide">
+        <div class="cover"
+          style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg);"></div>
+      </li>
+      <li class="slide">
+        <div class="cover"
+          style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature6.jpg);"></div>
+      </li>
+    </ul>
+    <div class="arrows">
+      <button class="arrow arrow-prev">
+        <span></span>
+      </button>
+      <button class="arrow arrow-next">
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus eleifend tincidunt. Integer lacus orci,
+        ullamcorper vel mi at, vestibulum ultrices quam. Pellentesque dui massa, fringilla id dolor id, imperdiet luctus
+        nisl. Nam vehicula facilisis quam quis vehicula. Sed tincidunt massa nibh, eget varius dui scelerisque in. Donec
+        urna tortor, commodo quis finibus non, vulputate sit amet nisl. Integer consectetur convallis sapien vel rutrum.
+      </p>
+  
+      <p>Suspendisse commodo odio magna, tristique semper velit pretium sed. Integer laoreet vestibulum turpis, hendrerit
+        imperdiet nibh egestas at. Etiam eu porttitor magna. Aliquam erat volutpat. Nulla euismod nulla at purus
+        dignissim, vitae mollis elit mollis. Fusce blandit massa sit amet ligula maximus tincidunt. Nullam eu metus vitae
+        nisi ullamcorper varius vitae ac mi.</p>
+  
+      <p>Sed et lacus vel sem efficitur dapibus in fringilla est. Vivamus nec varius sem, id finibus eros. Integer magna
+        nulla, tempor non nulla a, porta pretium enim. Quisque volutpat dolor sed arcu posuere, et bibendum ligula
+        suscipit. Morbi pharetra ipsum massa, nec viverra elit dapibus a. Praesent turpis lectus, porttitor ut laoreet at,
+        mattis ac arcu. Phasellus facilisis arcu a condimentum elementum. Ut at lacus interdum, mattis nibh nec, mollis
+        elit. Ut laoreet risus ut nibh aliquam, eu venenatis purus volutpat. Quisque lobortis consectetur mi, accumsan
+        vulputate quam. Integer eget nulla velit. Pellentesque non condimentum lacus.
+      </p>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <small>Made with <span>❤</span> by <a href="http://georgemartsoukos.com/" target="_blank">George Martsoukos</a>
+      </small>
+    </div>
+  </footer>
+  <!-- ************************************ -->
+
+</body>
+
+</html>

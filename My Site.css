@@ -1,0 +1,355 @@
+/* body{
+    background-color: blue;
+} */
+
+body {
+    padding: 20px;
+    margin-left: 10px;
+    margin: 0;
+    font-family: 'Montserrat', fantasy;
+    background-color: #F6F7C1;
+    /* background-image: url('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
+    /* background-color: #90EE90; */
+    color: aliceblue;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', ExtraBold 800;
+}
+
+/* title{
+    color: aliceblue;
+} */
+
+div {
+    background-color: #F6F7C1;
+    /* background-image: url('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
+    /* background-color: #90EE90; */
+}
+
+
+/* img{
+    float: left;
+} */
+
+
+
+/* neumorphism css */
+.neumorphic-container {
+    display: inline-block;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 
+      10px 10px 20px #d9d9d9,
+      -10px -10px 20px #ffffff;
+  }
+  
+  .neumorphic-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+/* pp */
+  .neumorphic-container-pp{
+    display: inline-block;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 
+      10px 10px 20px #d9d9d9,
+      -10px -10px 20px #ffffff;
+  }
+  
+  .neumorphic-container-pp img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+
+
+
+
+  
+.top-container {
+    /* background-color: black; */
+    /* background-image: url('https://images.unsplash.com/photo-1652310133032-3e5808888c9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'); */
+    background-image: url('https://i.pinimg.com/564x/06/df/18/06df18c2bb1a1509002c75a25c533b97.jpg');
+    /* important neeche */
+    background-size: cover;
+    /* opacity: 0.5; */
+
+
+
+    /* Add the blur effect */
+    /* filter: blur(8px);
+        -webkit-filter: blur(8px); */
+
+    /* Full height */
+    /* height: 100%;  */
+
+    /* Center and scale the image nicely */
+    /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+
+
+
+}
+
+
+
+/* .middle-container{
+    background-color: black ;
+    width: 200px;
+    height: 200px;
+    top: 80px;
+    position: absolute;
+    right:0px;
+    display: inline-block;
+    left: 200px;
+ } */
+/* .bottom-container{
+    background-color: blue;
+    width: 200px;
+    position: relative; */
+/* position: fixed; */
+/* display: inline-block;
+    height: 200px;
+} */
+
+
+hr {
+    background-color: #F6F7C1;
+    /* background-image: ('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
+    /* agar white karenge to nahi higa kuch, iskiye none wali cheez kari hai */
+    /* border-style: none; */
+    /* height: 0px;
+    width: 100%; */
+    /* border-style: none none dotted; */
+
+    /* important down */
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    width: 5%;
+}
+
+
+
+
+
+/* two images side by side and their description below each respectively */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .image-wrapper {
+    flex-basis: calc(50% - 1rem);
+    margin-right: 2rem;
+  }
+  
+  .image-wrapper:last-of-type {
+    margin-right: 0;
+  }
+  
+  .image-wrapper img {
+    display: block;
+    width: 100%;
+  }
+  
+  .image-caption {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+/* button,
+button:focus {
+    font-family: 'Montserrat', fantasy;
+    font-size: 15px;
+    padding: 8px 5px;
+    border-radius: 0.7rem;
+    background-color: #F6F7C1;
+    background-image: none;
+    border: 2px solid rgb(50, 50, 50);
+    border-bottom: 5px solid rgb(50, 50, 50);
+    box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
+    color: #09083D;
+}
+
+button:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* button ke liye */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    /* text-shadow: 2px 2px rgb(116, 116, 116); */
+    text-transform: uppercase;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+  
+  button:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+  }
+  
+  button svg {
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  .play {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+  }
+  
+  button:hover svg {
+    transform: scale(3) translate(50%);
+  }
+  
+  .now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  button:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+  }
+  
+  button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+  }
+
+
+
+
+.pro {
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: small;
+    color: white;
+    /* text-align: center; */
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 50px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* button ends */
+
+
+
+
+
+/* button niche */
+/* button {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: hsl(255deg 50% 40%);
+    border: solid 4px hsl(50deg 100% 50%);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+}
+
+.default-btn,
+.hover-btn {
+    background-color: hsl(255deg 50% 40%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.hover-btn {
+    position: absolute;
+    inset: 0; */
+/* padding: 5px 10px; */
+/* background-color: hsl(255deg 50% 49%);
+    transform: translate(0%, 100%);
+}
+
+.default-btn span {
+    color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+    color: hsl(50deg 100% 50%);
+}
+
+button:hover .default-btn {
+    transform: translate(0%, -100%);
+}
+
+button:hover .hover-btn {
+    transform: translate(0%, 0%);
+} */

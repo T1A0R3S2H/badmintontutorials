@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Badminton Tutorials</title>
+  <link rel="icon" href="badminton-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="badminton.css">
+</head>
+
+<body>
+
+
+  <!-- close   -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <img src="modal-popup.png" alt="Image" class="modal-image">
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the modal
+    const modal = document.getElementById("modal");
+
+    // Get the <span> element that closes the modal
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Show the modal when the page loads
+    window.addEventListener("load", function () {
+      modal.style.display = "block";
+    });
+  </script>
+
+
+
+  <header>
+    <img src="shuttle.gif" height="100%" width="100%">
+    <h1>BADMINTON TUTORIALS</h1>
+    <!-- <nav>
+			<a href="#">SKILLS</a>
+			<a href="#">RANKINGS</a>
+			<a href="#">TRAINING</a>
+			<a href="#">CONTACT US</a>
+		</nav> -->
+
+    <div class="navbar">
+      <a href="css.html">Home</a>
+      <!-- <a href="#news">Skills</a> -->
+      <!-- rules -->
+      <!-- <div class="dropdown">
+        <button class="dropbtn">Rules ▼
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">BWF Official Rules</a>
+          <a href="PDF-icon.svg">SVG File</a>
+          <center>
+            <a href="Simplified Rules of Badminton - Dec 2015.pdf">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 64 64' id='pdf-file'%3E%3Cpath d='M32.24 33.52H31v9.31h1.21a1.07 1.07 0 0 0 .81-.35 1.14 1.14 0 0 0 .33-.81v-7a1.12 1.12 0 0 0-.34-.82A1.09 1.09 0 0 0 32.24 33.52zM25.12 37.46a1.13 1.13 0 0 0 .34-.82v-2a1.15 1.15 0 0 0-.31-.84 1.12 1.12 0 0 0-.84-.32H23.09V37.8H24.3A1.1 1.1 0 0 0 25.12 37.46z'%3E%3C/path%3E%3Cpath d='M55,27H54V15s0,0,0-.06a1,1,0,0,0-.05-.26l0-.09a1,1,0,0,0-.19-.29h0l-12-12h0a1,1,0,0,0-.29-.19l-.09,0A1,1,0,0,0,41.06,2H11a1,1,0,0,0-1,1V27H9a1,1,0,0,0-1,1V48a1,1,0,0,0,1,1h1V61a1,1,0,0,0,1,1H53a1,1,0,0,0,1-1V49h1a1,1,0,0,0,1-1V28A1,1,0,0,0,55,27ZM42,5.41,50.59,14H42ZM52,60H12V49H52ZM21.07,44.82V31.47h3.17a3.07,3.07,0,0,1,2.34.93,3.22,3.22,0,0,1,.81,2.26v1.94a3.11,3.11,0,0,1-.92,2.26,3,3,0,0,1-2.23.94H23.09v5Zm7.94,0V31.46h3.16a3,3,0,0,1,2.24.94,3.09,3.09,0,0,1,.92,2.25v7a3.1,3.1,0,0,1-.93,2.26,3,3,0,0,1-2.24.94Zm12.83-7.69v2H39.12v5.67h-2V31.46h5.73v2H39.12v3.64ZM52,27H12V4H40V15a1,1,0,0,0,1,1H52Z'%3E%3C/path%3E%3C/svg%3E"
+                alt="PDF-icon">
+            </a>
+          </center>
+        </div>
+      </div> -->
+
+
+
+      <!-- rankings -->
+      <div class="dropdown">
+        <button class="dropbtn">Shop <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="12.000000pt"
+            height="12.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+              <path
+                d="M3980 5113 c-371 -37 -717 -204 -1009 -487 -272 -264 -442 -567 -513 -913 -30 -149 -30 -368 0 -500 32 -142 94 -282 167 -379 l23 -31 -511 -511 -512 -512 -150 0 -150 0 -657 -657 c-712 -713 -691 -690 -655 -759 19 -35 322 -337 356 -354 14 -7 38 -9 60 -5 31 5 120 90 694 663 l657 657 0 150 0 150 511 511 511 511 78 -52 c164 -108 344 -158 570 -158 332 1 616 97 922 313 105 75 274 233 358 335 475 582 519 1320 102 1743 -210 213 -525 318 -852 285z m363 -241 l58 -17 -86 -85 -85 -85 -75 75 -75 74 33 34 c32 34 32 34 102 28 39 -4 96 -14 128 -24z m-577 -33 c3 -6 -26 -43 -67 -85 l-73 -74 -43 42 c-25 25 -39 46 -34 51 13 13 173 77 193 77 9 0 20 -5 24 -11z m948 -197 l39 -44 -111 -111 -112 -112 -70 70 c-38 38 -70 74 -70 80 0 5 48 58 107 117 l107 107 35 -31 c20 -17 54 -51 75 -76z m-714 -187 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75 -75 -75z m-600 0 l-75 -75 -74 74 -74 75 33 28 c18 15 56 45 84 66 l50 38 66 -66 65 -65 -75 -75z m1496 -240 l6 -70 -36 -35 -36 -34 -70 69 c-39 38 -70 74 -70 80 0 5 37 47 83 93 l82 83 18 -58 c9 -32 20 -89 23 -128z m-1196 -60 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75 -75 -75z m-595 145 l70 -70 -78 -78 -77 -77 -62 62 c-55 55 -61 64 -51 85 15 34 106 147 118 148 6 0 42 -32 80 -70z m1203 -3 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0 38 -33 78 -73z m-903 -297 l70 -70 -78 -77 -77 -78 -70 70 c-38 38 -70 74 -70 79 0 14 132 146 145 146 6 0 42 -32 80 -70z m603 -3 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0 38 -33 78 -73z m600 0 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0 38 -33 78 -73z m-1813 -146 c-109 -109 -120 -77 -38 108 l24 54 45 -44 44 -43 -75 -75z m303 -154 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0 38 -33 78 -73z m604 6 c38 -37 68 -72 68 -77 0 -14 -132 -146 -145 -146 -6 0 -42 32 -80 70 l-69 70 74 75 c41 41 77 75 79 75 3 0 36 -30 73 -67z m606 -6 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0 38 -33 78 -73z m538 58 c6 -14 -33 -128 -63 -189 l-15 -28 -44 43 -44 43 72 73 c40 40 76 73 81 73 4 0 10 -7 13 -15z m-2049 -357 l73 -73 -87 -87 -87 -88 -18 63 c-9 34 -20 90 -24 125 -6 62 -6 64 27 98 18 19 35 34 38 34 3 0 38 -33 78 -72z m603 -153 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75 -75 -75z m607 153 l73 -73 -72 -72 c-40 -40 -77 -73 -83 -73 -6 0 -42 32 -80 70 l-69 70 74 75 c41 41 77 75 80 75 2 0 37 -33 77 -72z m591 9 l62 -63 -37 -50 c-21 -28 -51 -66 -66 -84 l-28 -33 -75 74 -74 74 72 72 c40 40 75 73 78 73 3 0 34 -28 68 -63z m-1534 -498 l-111 -111 -62 58 c-98 91 -100 80 25 205 l109 109 75 -75 75 -75 -111 -111z m636 36 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75 -75 -75z m602 158 c38 -37 68 -72 68 -78 -1 -12 -114 -103 -148 -118 -21 -10 -30 -4 -85 51 l-62 62 75 75 c41 41 77 75 79 75 3 0 36 -30 73 -67z m-862 -419 c-35 -35 -36 -36 -95 -29 -58 6 -175 32 -184 41 -3 3 33 43 79 89 l85 85 75 -75 74 -75 -34 -36z m570 98 c0 -5 -100 -47 -158 -67 -40 -13 -57 -14 -65 -6 -8 8 8 31 63 86 l74 75 43 -42 c24 -23 43 -44 43 -46z m-2440 -1290 c0 -67 -3 -82 -20 -97 -21 -19 -22 -18 -97 58 -76 75 -77 76 -58 97 15 17 30 20 97 20 l78 0 0 -78z m-268 -189 c38 -37 68 -72 68 -78 0 -5 -216 -226 -480 -490 l-480 -480 -77 78 -78 77 480 480 c264 264 484 480 490 480 5 0 40 -30 77 -67z"
+                fill="#ffffff" />
+              <path
+                d="M3925 2006 c-40 -19 -801 -783 -814 -818 -12 -32 2 -88 27 -110 9 -8 181 -113 382 -233 241 -144 385 -237 424 -273 114 -104 200 -142 320 -142 121 0 217 40 302 124 84 85 124 181 124 302 0 121 -38 206 -143 320 -35 39 -130 186 -277 433 -124 205 -233 379 -245 386 -33 22 -68 26 -100 11z m189 -552 c91 -151 166 -279 166 -283 0 -4 -19 -26 -43 -49 l-43 -42 -134 136 c-156 158 -202 194 -242 194 -63 0 -108 -46 -108 -109 0 -39 38 -86 194 -241 l136 -134 -42 -43 c-23 -24 -45 -43 -49 -43 -13 0 -559 331 -559 338 0 9 543 552 552 552 4 0 81 -124 172 -276z m340 -506 c31 -63 33 -117 5 -178 -27 -60 -45 -79 -104 -106 -60 -29 -116 -30 -170 -4 -79 37 -83 26 80 190 82 82 153 150 156 150 4 0 19 -23 33 -52z"
+                fill="#ffffff" />
+            </g>
+          </svg>
+          <i class="fa fa-caret-down"></i>
+        </button>
+
+
+        <div class="dropdown">
+          <!-- <button class="dropbtn">Dropdown</button> -->
+          <div class="dropdown-content">
+            <a href="#" onmouseover="playAudio('audio1')" onmouseout="pauseAudio('audio1')">Rackets</a>
+            <a href="#" onmouseover="playAudio('audio2')" onmouseout="pauseAudio('audio2')">Shuttles</a>
+            <a href="#" onmouseover="playAudio('audio3')" onmouseout="pauseAudio('audio3')">Grips</a>
+            <a href="#" onmouseover="playAudio('audio4')" onmouseout="pauseAudio('audio4')">Shoes</a>
+            <a href="#" onmouseover="playAudio('audio5')" onmouseout="pauseAudio('audio5')">Kitbags</a>
+            <a href="#" onmouseover="playAudio('audio6')" onmouseout="pauseAudio('audio6')">Accessories</a>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <audio id="audio1" src="rackets.mp3"></audio>
+        <audio id="audio2" src="shuttles.mp3"></audio>
+        <audio id="audio3" src="grips.mp3"></audio>
+        <audio id="audio4" src="shoes.mp3"></audio>
+        <audio id="audio5" src="kitbags.mp3"></audio>
+        <audio id="audio6" src="accesories.mp3"></audio>
+
+        <!-- Categories -->
+        <audio id="audio7" src="rackets.mp3"></audio>
+        <audio id="audio8" src="rackets.mp3"></audio>
+        <audio id="audio9" src="rackets.mp3"></audio>
+        <audio id="audio10" src="rackets.mp3"></audio>
+        <audio id="audio11" src="rackets.mp3"></audio>
+
+        <!--  -->
+
+
+
+        <script>
+          function playAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.currentTime = 0; // Restart audio from the beginning
+            audio.play();
+          }
+
+          function pauseAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.pause();
+            audio.currentTime = 0; // Reset the audio to the beginning
+          }
+        </script>
+      </div>
+
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">Categories ▼
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="sub-menu">
+            <a href="#">Playing the Game</a>
+            <div class="sub-menu-content">
+              <a href="#">Rules</a>
+              <a href="#">Scoring System</a>
+              <a href="#">Game Formats</a>
+              <a href="#">Court Dimensions and Markings</a>
+              <a href="#">Upcoming Tournaments</a>
+            </div>
+          </div>
+          <div class="sub-menu">
+            <a href="#">Resources and Guides</a>
+            <div class="sub-menu-content">
+              <a href="#">Gear Guide</a>
+              <a href="#">Strings and its types</a>
+              <a href="#">Rackets and its Selection</a>
+              <a href="#">Grip Selection</a>
+              <a href="#">Shoes nad Apparel Selection</a>
+            </div>
+          </div>
+          <div class="sub-menu">
+            <a href="#">Strategies and Tactics</a>
+            <div class="sub-menu-content">
+              <a href="#">Singles Strategy</a>
+              <a href="#">Doubles Strategy</a>
+              <a href="#">Playing Offencive</a>
+              <a href="#">Playing Defencive</a>
+              <a href="#">Mental Health and Psyological Preparation</a>
+            </div>
+          </div>
+
+          <div class="sub-menu">
+            <a href="#">Just for Fun</a>
+            <div class="sub-menu-content">
+              <a href="#">Trick Shots and Fancy Shots</a>
+              <a href="#">New formats of Badminton</a>
+              <a href="#">Interesting Facts</a>
+              <a href="#">Funny Moments & Bloopers</a>
+              <a href="#">Inspirational Stories</a>
+            </div>
+          </div>
+          <div class="sub-menu">
+            <a href="#">FAQs</a>
+          </div>
+        </div>
+
+
+
+      </div>
+  </header>
+<br>
+<br>
+  <!-- <center><img src="welcome (2).png" alt="haha" height="50%" width="50%"></center> -->
+  <!-- <center><img src="textanim-YhfsS.gif" alt="hmm" height="70%" width="70%"></center> -->
+
+  <!-- <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg" style="height: 100%; width: 100%;">
+    <source src="li vs lee rally.mp4" type="video/mp4">
+  </video> -->
+
+
+  <!-- <div class="piechart"></div> -->
+
+
+
+
+  <!-- <div id="video-player">
+    <video id="my-video" controls>
+      <source src="li vs lee rally.mp4" type="video/mp4">
+    </video>
+  </div> -->
+
+  <!-- carousel -->
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div id="video-player">
+        <video id="my-video" controls>
+          <source src="li vs lee rally.mp4" type="video/mp4">
+          <!-- Add additional source elements for different video formats if needed -->
+        </video>
+      </div>
+      <!-- <div class="text">Caption Text</div> -->
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div id="video-player">
+        <video id="my-video" controls>
+          <source src="rally2.mp4" type="video/mp4">
+          <!-- Add additional source elements for different video formats if needed -->
+        </video>
+      </div> <!-- <div class="text">Caption Two</div> -->
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <div id="video-player">
+        <video id="my-video" controls>
+          <source src="really.mp4" type="video/mp4">
+          <!-- Add additional source elements for different video formats if needed -->
+        </video>
+      </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    let currentVideo = null;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+
+      // Pause the previous video
+      if (currentVideo) {
+        currentVideo.pause();
+      }
+
+      // Check if the current slide has a video and play it
+      let currentSlide = slides[slideIndex - 1];
+      let videoElement = currentSlide.querySelector("video");
+      if (videoElement) {
+        currentVideo = videoElement;
+        videoElement.play();
+      }
+    }
+  </script>
+
+
+
+
+  <script>
+    // JavaScript for controlling video playback
+    var video = document.getElementById("my-video");
+
+    // Play button
+    function playVideo() {
+      video.play();
+    }
+
+    // Pause button
+    function pauseVideo() {
+      video.pause();
+    }
+
+    // Fast forward button
+    function fastForwardVideo() {
+      video.currentTime += 10; // Adjust the time as per your requirement
+    }
+
+    // Speed options
+    function changePlaybackSpeed(speed) {
+      video.playbackRate = speed;
+    }
+  </script>
+  
+
+  <br>
+  <center>
+    <!-- <div class="card">
+      <div class="card-content">
+        <p>Ahee after watching those nerve wrecking rallies, are you ready to become a maestro and play those rallies one day?</p>
+        <p>Come on, let's start the journey to become a pro shuttler!</p>
+      </div>
+    </div> -->
+  </center>
+  <center>
+    <p class="shuru">
+      Ahee! after watching those nerve-wracking rallies, are you ready to become a pro and play those rallies one day for your country?
+      Let's begin then...
+    </p>
+    <style>
+      .shuru {
+        font-family: 'Lexend Deca', sans-serif;
+        color: darkblue;
+        font-size: 2em;
+        font-weight: bold;
+      }
+  
+      @media (max-width: 768px) {
+        .shuru {
+          font-size: 1em;
+        }
+      }
+    </style>
+  </center>
+<hr>
+  <center>
+    <!-- <h1>Roadmap to become a PRO shuttler</h1> -->
+    <!-- <img src="roadmap.png" alt="roadmap" height="50%" width="50%"> -->
+    <div class="dabba">
+      <img src="roadmap.png" alt="Roadmap" class="roadmap-image">
+      <!-- <img src="r1-removebg-preview.png" alt="Image 1" class="overlay-image overlay-image-1"> -->
+      <!-- <img src="r2-removebg-preview.png" alt="Image 2" class="overlay-image overlay-image-2"> -->
+      <!-- <img src="r3-removebg-preview.png" alt="Image 3" class="overlay-image overlay-image-3"> -->
+      <!-- <img src="r4-removebg-preview.png" alt="Image 4" class="overlay-image overlay-image-4"> -->
+      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+        target="_blank"> <img src="r1-removebg-preview.png" alt="Image 1" class="overlay-image overlay-image-1">
+      </a>
+      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+        target="_blank"> <img src="r2-removebg-preview.png" alt="Image 2" class="overlay-image overlay-image-2">
+      </a>
+
+      <!-- anchor is used -->
+
+      <a href="#services"><img src="r3-removebg-preview.png" alt="Image 3" class="overlay-image overlay-image-3">
+      </a>
+
+      <a href="#exercises"><img src="r4-removebg-preview.png" alt="Image 4" class="overlay-image overlay-image-4">
+      </a>
+
+    </div>
+    <center>
+      <p style="font-family: 'Lexend Deca',sans-serif; color: red; font-size: 1.25em;font-weight: bold;">*click on the numbers to know more</p></center>
+  
+  </center>
+
+
+  <br>
+  <hr>
+  <!-- grip -->
+  <center>
+  <h2 id="grip">Grip
+  </h2>
+  <style>
+    h2#grip {
+      font-size: 70px;
+      font-family: 'Lexend Deca', sans-serif;
+      color: #2a0010;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      h2#grip {
+        font-size: 50px;
+      }
+    }
+  </style>
+  </center>
+  <br>
+  <div class="eccentric-container">
+    <div class="funky-box">
+      <div class="accha-dabba">
+        <a href="www.google.com"
+          target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+        </a>
+      </div>
+    </div>
+    <div class="quirky-description">
+      <h2 class="grips">Forehand Grip</h2>
+      <p id="quirky-description">The forehand grip is the most basic and widely used grip in badminton. 
+        In this grip, the player holds the racket handle with their fingers wrapped around the handle, 
+        and the thumb placed on the wider flat surface of the handle. This grip allows for easy execution 
+        of forehand shots.</p>
+      <style>
+        p #quirky-style {
+          font-size: 20px;
+          font-family: 'Lexend Deca', sans-serif;
+          color: black;
+        }
+      </style>
+    </div>
+  </div>
+
+  <div class="eccentric-container">
+    <div class="funky-box">
+      <div class="accha-dabba">
+        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+          target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+        </a>
+      </div>
+    </div>
+    <div class="quirky-description">
+      <h2 class="grips">Backhand Grip</h2>
+      <p id="quirky-description">The backhand grip is used for hitting shots on the backhand side of the body. 
+        It is a variation of the forehand grip where the player slightly changes the positioning of the hand. 
+        The thumb is moved closer to the back of the handle, allowing for better control and maneuverability 
+        while hitting backhand shots.</p>
+      <style>
+        p #quirky-style {
+          font-size: 20px;
+          font-family: 'Lexend Deca', sans-serif;
+          color: black;
+        }
+      </style>
+    </div>
+  </div>
+
+  <div class="eccentric-container">
+    <div class="funky-box">
+      <div class="accha-dabba">
+        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+          target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+        </a>
+      </div>
+    </div>
+    <div class="quirky-description">
+      <h2 class="grips">Panhandle Grip (Short Grip)</h2>
+      <p id="quirky-description">The panhandle grip is used for performing quick shots, such as net shots or quick flicks. 
+        In this grip, the player holds the racket handle with the thumb and index finger only, creating a "panhandle" shape. 
+        This grip provides greater control and precision for delicate shots close to the net.</p>
+      <style>
+        p #quirky-style {
+          font-size: 20px;
+          font-family: 'Lexend Deca', sans-serif;
+          color: black;
+        }
+      </style>
+    </div>
+  </div>
+
+  <div class="eccentric-container">
+    <div class="funky-box">
+      <div class="accha-dabba">
+        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+          target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+        </a>
+      </div>
+    </div>
+    <div class="quirky-description">
+      <h2 class="grips">Panhandle Grip (Short Grip)</h2>
+      <p id="quirky-description">The thumb grip, also known as the "serve grip," is specifically used for serving in badminton. 
+        In this grip, the player holds the racket handle with the thumb resting against the wider flat surface of the handle. 
+        The other fingers wrap around the handle, allowing for more power and control while serving.</p>
+      <style>
+        p #quirky-style {
+          font-size: 20px;
+          font-family: 'Lexend Deca', sans-serif;
+          color: black;
+        }
+      </style>
+    </div>
+  </div>
+
+  
+  <style>
+    .eccentric-container {
+      font-family: 'Lexend Deca', sans-serif;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      left: 50px;
+      vertical-align: middle;
+    }
+
+    /* .funky-box {
+      font-family: 'Lexend Deca', sans-serif;
+      width: 40%;
+      background-color: #F3F5F8;
+      border-radius: 10px;
+      box-shadow: 10px 10px 20px #C9D1D9, -10px -10px 20px #FFFFFF;
+      margin-right: 20px;
+    } */
+
+    .quirky-description {
+      font-family: 'Lexend Deca', sans-serif;
+      width: 500px;
+      margin-left: 100px;
+    }
+
+    .accha-dabba {
+      left: 10%;
+      width: 100%;
+      display: inline-block;
+      padding: 0px;
+      border-radius: 10px;
+      background-color: hsl(0, 100%, 100%);
+      box-shadow:
+        5px 5px 10px #1a1a1a,
+        -5px -5px 10px #ffffff;
+    }
+
+    .accha-dabba img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        h2 grips {
+          font-size: 20px;
+        }
+        .quirky-description {
+      font-family: 'Lexend Deca', sans-serif;
+      width: 500px;
+      font-size: smaller;
+      margin-left: 80px;
+      }
+    }
+
+  </style>
+  <hr>
+  <!-- neeche chaalu hai side by side videos of skills -->
+  <center>
+    <h2 id="services">Service and Strokes</h2>
+    <style>
+      h2#services {
+        font-size: 70px;
+        font-family: 'Lexend Deca', sans-serif;
+        color: #2a0010;
+
+      }
+
+      @media screen and (max-width: 768px) {
+        h2#services {
+          font-size: 50px;
+        }
+      }
+    </style>
+
+    <!-- <h3 style="font-family: 'Lexend Deca', sans-serif;padding-top: 0px;">Click on the stroke you want to learn</h3> -->
+  </center>
+  <div class="skills">
+    <center>
+      <!-- <h2>My Skills</h2> -->
+    </center>
+    <div class="skill-row">
+      <img class="" src="" alt="">
+      <center>
+        <!-- <h3>Non-Technical</h3> -->
+        <div class="pic-dabba">
+          <div class="pic-wrapper">
+            <center>
+              <h3>Rotating Wrist</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+              <p>
+                Description
+              </p>
+            </center>
+
+          </div>
+          <div class="pic-wrapper">
+            <center>
+              <h3>Jumping Jacks</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+              <p>Description of Jumping Jacks
+              </p>
+            </center>
+          </div>
+
+          <div class="pic-wrapper">
+            <center>
+              <h3>Forward Lunges</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+              <p>
+                Description of Forward Lunges
+              </p>
+            </center>
+
+          </div>
+
+
+        </div>
+        <div class="pic-dabba">
+          <div class="pic-wrapper">
+            <center>
+              <h3>Toe Touches</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+              <p>
+                Description of Toe Touches
+              </p>
+            </center>
+
+          </div>
+          <div class="pic-wrapper">
+            <center>
+              <h3>Calf Strecthes</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+              <p>
+                Description of Calf Strecthes
+              </p>
+            </center>
+
+          </div>
+          <div class="pic-wrapper">
+            <center>
+              <h3>Shadow</h3>
+              <!-- <br> -->
+              <div class="neumorphic-container">
+                <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                  target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                </a>
+              </div>
+
+              <p>
+                Description of Shadow
+              </p>
+            </center>
+
+          </div>
+        </div>
+        <hr>
+
+        <h2 id="exercises">Exercises
+        </h2>
+        <style>
+          h2#exercises {
+            font-size: 70px;
+            font-family: 'Lexend Deca', sans-serif;
+            color: #2a0010;
+
+          }
+
+          @media screen and (max-width: 768px) {
+            h2#exercises {
+              font-size: 50px;
+            }
+          }
+        </style>
+
+
+
+
+
+
+
+
+
+        <div class="exercise-class">
+          <center>
+            <!-- <h2>My Skills</h2> -->
+          </center>
+          <div class="exercise-row">
+            <img class="" src="" alt="">
+            <center>
+              <!-- <h3>Non-Technical</h3> -->
+              <div class="pic-dabba">
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Rotating Wrist</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+                    <p>
+                      Description
+                    </p>
+                  </center>
+
+                </div>
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Jumping Jacks</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+                    <p>Description of Jumping Jacks
+                    </p>
+                  </center>
+                </div>
+
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Forward Lunges</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+                    <p>
+                      Description of Forward Lunges
+                    </p>
+                  </center>
+
+                </div>
+
+
+              </div>
+              <div class="pic-dabba">
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Toe Touches</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+                    <p>
+                      Description of Toe Touches
+                    </p>
+                  </center>
+
+                </div>
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Calf Strecthes</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+                    <p>
+                      Description of Calf Strecthes
+                    </p>
+                  </center>
+
+                </div>
+                <div class="pic-wrapper">
+                  <center>
+                    <h3>Shadow</h3>
+                    <!-- <br> -->
+                    <div class="neumorphic-container">
+                      <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287798#overview"
+                        target="_blank"> <img src="ezgif.com-video-to-gif.gif" alt="Badminton" height="40%" width="40%">
+                      </a>
+                    </div>
+
+                    <p>
+                      Description of Shadow
+                    </p>
+                  </center>
+
+                </div>
+              </div>
+
+
+              <!-- !!learn js in holidays, complete front-end!! -->
+
+              <!-- go to top button -->
+              <!-- <button onclick="goToTop()" id="goToTopButton" title="Go to Top">🔝</button> -->
+              <button onclick="goToTop()" id="goToTopButton" title="Go to Top">⏏</button>
+              <script>
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("goToTopButton").style.display = "block";
+                  } else {
+                    document.getElementById("goToTopButton").style.display = "none";
+                  }
+                }
+
+                function goToTop() {
+                  document.body.scrollTop = 0; // For Safari
+                  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+                }
+
+              </script>
+
+              <!-- Smash your way to success with Welcome Badminton Tutorials! appppp -->
+
+          </div>
+          <br>
+          <!-- <div class="sketchfab-embed-wrapper"> <iframe title="Badminton Shuttlecock" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4c9f001254534d4f90d94adf33e6dc24/embed"> </iframe> <p style="font-size: 0px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Badminton Shuttlecock </a> by <a href="" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> sandyonmars </a> on <a href="" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div> -->
+          <!-- <div class="sketchfab-embed-wrapper"> <iframe title="Badminton Court" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6487ca884dc54a9e8f3c10164a5a96ee/embed"> </iframe> <p style="font-size: 0px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/badminton-court-6487ca884dc54a9e8f3c10164a5a96ee?utm_medium=embed&utm_campaign=share-popup&utm_content=6487ca884dc54a9e8f3c10164a5a96ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Badminton Court </a> by <a href="https://sketchfab.com/studiolab.dev?utm_medium=embed&utm_campaign=share-popup&utm_content=6487ca884dc54a9e8f3c10164a5a96ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Studio Lab </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=6487ca884dc54a9e8f3c10164a5a96ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div> -->
+
+
+          <hr>
+
+
+          
+
+
+
+
+          <!-- Progress bar -->
+          <div id="progress-bar">
+            <div id="progress-bar-inner"></div>
+          </div>
+
+          <script>
+            // Function to update the progress bar based on scroll position
+            function updateProgressBar() {
+              const windowHeight = window.innerHeight;
+              const fullHeight = document.body.clientHeight - windowHeight;
+              const progress = (window.pageYOffset / fullHeight) * 100;
+
+              // Update the width of the progress bar
+              document.getElementById("progress-bar-inner").style.width = progress + "%";
+            }
+
+            // Update the progress bar when the user scrolls
+            window.addEventListener("scroll", updateProgressBar);
+          </script>
+
+
+</body>
+
+
+
+</html>

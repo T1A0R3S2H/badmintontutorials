@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact me</title>
+    <link rel="shortcut icon" href="D:\WebDev\—Pngtree—calling vector icon_4279820.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <h1>Some timepass first</h1>
+    <style>
+
+    </style>
+</head>
+
+<!-- <body style="background-color: bisque;"> -->
+    <!-- there can be many buttons and different things 
+    one example is the time selection box and color picker which is below
+    many ar there from the website,
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time -->
+
+    <p>
+        <label>Color Picker: </label>
+        <input type="color" name="" id="">
+        <br>
+        <label>Are You Here?</label>
+        <input type="checkbox" name="YES" id="">
+        <br>
+        <label>Select a number: </label>
+        <input type="number" name="" id="">
+        <br>
+        <label>Enter the password: </label>
+        <input type="password" name="" id="">
+        <br>
+        <label>Enter a url</label>
+        <input type="url" name="" id="">
+    </p>
+</body>
+
+<!-- below is java script -->
+
+<script>
+    function onc() {
+        var k = document.getElementById("imp").value;
+        if (k == "") {
+            alert("Enter your Name Yaar")
+        } else {
+            fetch(
+                'https://api.telegram.org/bot5712131481:AAH_AzBxXtvg_McA3O0nWf0lLWQvecmPwAs/sendMessage?chat_id=1040808826&text=' + k
+            );
+            alert("message sent!")
+        }
+    }
+</script>
+
+
+<!-- above is javascript -->
+
+
+<hr color="Red">
+<h1>My contact details</h1>
+
+<body>
+    <p>Tarsh Swarnkar</p>
+    <p>7425034475</p>
+    <p>2022kucp1032@<mark>iiit</mark>kota.ac.in</p>
+
+    <!-- important things below -->
+
+    <form action=""></form>
+    <label>Your Name:</label>
+    <input type="text" name="" id="imp">
+    <button onclick="onc();">Submit</button>
+    <br>
+    <label for="appt-time">Select an <mark>appointment time</mark>: </label>
+    <input id="appt-time" type="time" name="appt-time" value="03:30" />
+    <br>
+
+    <!-- important things below -->
+    <!-- <form action="" method="post"></form> -->
+    <!-- method me get karne se niche wali mail me message aayega -->
+    <form class=" " action="mailto:swarntarsh18@gmail.com" method="get" enctype="text/plain">
+    <label>Your email ID: </label>
+    <input type="email" name="yourEmail" id="">
+    <button onclick="onc();">Submit</button>
+    <br>
+    <label>Your Message: </label>
+    <br>
+    <textarea name="yourMessage" id="" cols="30" rows="10"></textarea>
+    <button onclick="onc();">Submit</button>
+    <br>
+    <hr>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/* nav bar neeche */
+nav {
+	width: 100%;
+	height: 80px;
+	background-color: #303030;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	/* justify-content: center; */
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body{
+	background-image: linear-gradient(to bottom, #000712, #071b2f);
+	background-attachment: fixed;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* .logo a {
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+} */
+
+.nav-items ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	margin-left: 500px;
+	/* add a margin-left of 5px to shift the right four options */
+}
+
+.nav-items li {
+	margin: 0 75px;
+}
+
+.nav-items li:nth-child(n+2) {
+	margin-left: 5px;
+	/* adjust the margin property to maintain spacing */
+}
+
+.nav-items a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.nav-items a:hover {
+	color: #f1c40f;
+}
+
+
+
+/* *************************** */
+/* CSS code for mobile screens */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@media only screen and (max-width: 480px) {
+	.nav-items {
+		display: none;
+	}
+
+	.nav-items.active {
+		display: block;
+	}
+
+	.nav-items ul {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.nav-items li {
+		margin: 10px 0;
+	}
+
+	.nav-items a {
+		padding: 10px;
+		font-size: 14px;
+	}
+} */
+/* *************************** */
+
+/* *********************carousel neeche**************** */
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  }
+  
+  ul {
+	list-style: none;
+  }
+  
+  a {
+	color: inherit;
+	text-decoration: none;
+  }
+  
+  button {
+	background: transparent;
+	border: none;
+	outline: none;
+  }
+  
+  body {
+	font: 20px/28px sans-serif;
+  }
+  
+  .container {
+	max-width: 900px;
+	margin: 0 auto;
+  }
+  
+  .cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+  }
+  
+  
+  /* SLIDESHOW
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .slideshow {
+	cursor: none;
+  }
+  
+  .slideshow .slides {
+	display: grid;
+  }
+  
+  .slideshow .slide {
+	grid-column: 1;
+	grid-row: 1;
+	opacity: 0;
+	transition: opacity 0.4s;
+  }
+  
+  .slideshow .slide.is-active {
+	opacity: 1;
+  }
+  
+  .slideshow .arrows {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+  }
+  
+  .slideshow .arrows .arrow {
+	position: relative;
+	width: 50%;
+	cursor: inherit;
+	visibility: hidden;
+	overflow: inherit;
+  }
+  
+  .slideshow .arrows .is-visible {
+	visibility: visible;
+  }
+  
+  .slideshow .arrows span {
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	background-size: 72px 72px;
+	mix-blend-mode: difference;
+	filter: invert(1);
+  }
+  
+  .slideshow .arrow-prev span {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/slider-prev-arrow.svg);
+  }
+  
+  .slideshow .arrow-next span {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/slider-next-arrow.svg);
+  }
+  
+  main {
+	padding: 50px;
+  }
+  
+  main p + p {
+	margin-top: 20px;
+  }
+  
+  
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  footer {
+	font-size: 1rem;
+	text-align: right;
+	padding: 10px 0;
+	border-top: 1px solid #ccc;
+  }
+  
+  footer span {
+	color: #e31b23;
+  }
+  /* **********carousel above************* */
+
+
+
+  
+.progress-container {
+	width: 100%;
+	height: 5px;
+	background-color: #f1f1f1;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.progress-bar {
+	height: 100%;
+	background-color: #4CAF50;
+	width: 0%;
+}
+
+
+
+

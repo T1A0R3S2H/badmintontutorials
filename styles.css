@@ -1,0 +1,170 @@
+/* **********TAG SELECTORS********* */
+
+body {
+    background-color: #add8bf;
+}
+
+hr {
+    background-color: #add8bf;
+    /* agar white karenge to nahi higa kuch, iskiye none wali cheez kari hai */
+    /* border-style: none; */
+    /* height: 0px;
+    width: 100%; */
+    /* border-style: none none dotted; */
+
+    /* important down */
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    width: 5%;
+
+    /* if we want same style in all our linked 
+    webpages 
+    then we can copy the full style section or there is method #2 */
+
+    /* or */
+    /* border-top-style: white; */
+}
+
+h1 {
+    /* background-color: #FFFFFF; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+
+
+
+
+
+/* what colour appears when we hover over the image */
+
+img:hover {
+    background-color: gold;
+}
+
+/* :(....), colon then something means it is a*/
+
+/* now if we want different images to have different backgrounds, we need to use class, css selectors */
+
+/* *********CLASS SELECTORS, . as prefix*********** */
+.NAMASTE {
+    background-color: black;
+    border-radius: 20%;
+}
+
+/* more specific than simple image */
+
+/* ********ID SELECTORS, # as prefix********* */
+#heading {
+    color: black;
+}
+
+/* this id heading is more specific than simple h1 */
+
+/* we can have only one instance of id name in 
+our html page, BUT we for class, we can you the
+element name multiple times*/
+/* any HTML element can have more than one class
+but it can have only one id */
+
+
+/* #big
+{
+    color: black;
+} */
+
+
+/* .flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+    flex-direction: column; */
+/* flex-direction: column-reverse; */
+/* width: 0px;
+}
+
+.flex-container>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 20px;
+    width: 20px;
+} */
+
+
+/* .flex-container {
+    display: flex;
+    flex-wrap: wrap; */
+/* flex-flow: column wrap; */
+/* flex-flow: row wrap; */
+/* flex-wrap: nowrap; */
+/* justify-content: center; */
+/* justify-content: space-around; */
+/* align-items: stretch; */
+/*it is by default also*/
+
+/* no wrap me agar width ko kitna bhi bada do, wo utna hi rahega jis se saare items ek hi kine me aa sake, without wrapping */
+
+/* flex-direction: column; */
+/* background-color: DodgerBlue;
+  }
+  /*  */
+
+
+
+
+
+
+/* .flex-container>div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/* @media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+} */
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
