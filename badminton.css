@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  font-family: 'Lexend Deca', Arial, sans-serif;
   /* background-image: url('https://r2.stablediffusionweb.com/images/background-faqs.jpg'); */
   /* background-repeat: no-repeat;
   background-size: cover; */
@@ -284,7 +285,7 @@ header a {
 }
 
 .dropdown-content {
-  top: 100%;
+  top: 17.92%;
   display: none;
   position: absolute;
   background-color: white;
